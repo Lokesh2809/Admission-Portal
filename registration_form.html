@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <style>
+        label
+        {
+            font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;
+            font-variant-caps: initial;
+            color:indianred;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <br>
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card">
+                    <header class="card-header" style="background-color: black;">
+                        <h4 class="card-title mt-2" style="color: wheat;">Register with us!</h4>
+                    </header>
+                    <article class="card-body">
+                        <form name="std" action="" onsubmit="return validate_form();" method="post">
+                            <div class="form-group">
+                                <label>Institution name</label>
+                                <input type="text" class="form-control" value="" name="std_name" size="24">
+                            </div>
+                            <div class="form-row">
+                                <div class="col form-group">
+                                    <label>Contact</label>
+                                    <input type="text" class="form-control" pattern="[7-9]{1}[0-9]{9}" value=""
+                                        onkeypress="return isNumberKey(event)" name="stdconnum" size="24">
+                                </div>
+                                <div class="col form-group">
+                                    <label>Student Capacity</label>
+                                    <input type="text" class="form-control" pattern="[7-9]{1}[0-9]{9}" value=""
+                                        onkeypress="return isNumberKey(event)" name="stdconnum" size="24">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleFormControlTextarea1">Address</label>
+                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label>Supporting:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                               
+                                <label class="form-check form-check-inline">
+                                    <label><input class="form-check-input" type="radio" name="radiogrp" id="9thCheck"
+                                            value="10th" onclick="setOptions('10th')">10th</label>
+                                </label>
+                                <label class="form-check form-check-inline">
+                                    <label><input type="radio" class="form-check-input" name="radiogrp" id="10Check"
+                                            value="+1" onclick="setOptions('+1')">+1</label>
+                                </label>
+                                <label class="form-check form-check-inline">
+                                    <label><input type="radio" class="form-check-input" name="radiogrp" id="+1Check"
+                                            value="+2" onclick="setOptions('+2')">+2</label>
+                                </label>
+                                <label class="form-check form-check-inline">
+                                    <label><input type="radio" class="form-check-input" name="radiogrp" id="+2Check"
+                                            value="degree" onclick="setOptions('degree')">degree</label>
+                                </label>
+                                <label class="form-check form-check-inline">
+                                    <label><input type="radio" class="form-check-input" name="radiogrp" id="degreeCheck"
+                                            value="university" onclick="setOptions('university')">university</label>
+                                </label>
+                            </div>
+                            <div class="form-group">
+                                <label>Email address</label>
+                                <input type="text" class="form-control" value="" name="std_email_id" size="24">
+                            </div>
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-primary btn-block"> Register </button>
+                                <button type="submit" class="btn btn-secondary btn-block"> Reset </button>
+                            </div>
+                        </form>
+                    </article>
+
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+    <br><br>
+</body>
+
+</html>
